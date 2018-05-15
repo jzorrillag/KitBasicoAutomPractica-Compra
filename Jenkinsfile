@@ -37,8 +37,8 @@
 			
 			stage('Generar desplegable') { 
 				steps { 
-					powershell 'wget http://localhost:8090/shutdown'
-					powershell 'wget http://localhost:8091/shutdown'
+					powershell 'wget http://localhost:7777/shutdown'
+					powershell 'wget http://localhost:7778/shutdown'
 					bat "build.bat"
 					
 				}
