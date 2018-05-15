@@ -19,7 +19,7 @@ public class ComprasController {
 
 		RespuestaCompra respuesta = new RespuestaCompra();
 		respuesta.setCodigoRespuesta("1");
-		respuesta.setMensajeRespuesta("Se registró la compra correctamente");
+		respuesta.setMensajeRespuesta("Se registro la compra correctamente");
 		return respuesta;
 	}
 
