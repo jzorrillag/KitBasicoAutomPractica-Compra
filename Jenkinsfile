@@ -60,7 +60,7 @@
 						  "files": [
 							{
 							  "pattern": "*.jar",
-							  "target": "kit-basico-repository"
+							  "target": "kit-basico-compras-repository"
 							}
 						 ]
 						}"""
@@ -83,12 +83,12 @@
 						branches: [[name: '*/master']], 
 						doGenerateSubmoduleConfigurations: false, 
 						extensions: [[$class: 'RelativeTargetDirectory', 
-							relativeTargetDir: 'KitBasicoAutomApp-Ops']], 
+							relativeTargetDir: 'KitBasicaAutomCompra-Ops']], 
 						submoduleCfg: [], 
-						userRemoteConfigs: [[url: 'https://github.com/mauro2357/KitBasicoAutomApp-Ops.git']]])     
+						userRemoteConfigs: [[url: 'https://github.com/mauro2357/KitBasicoAutomPractica-Compra.git']]])     
 			      }
-					bat 'mkdir "KitBasicoAutomApp/build/libs/config"'
-					bat 'xcopy "KitBasicoAutomApp-Ops/config" "KitBasicoAutomApp/build/libs/config"'
+					bat 'mkdir "KitBasicaAutomCompra/build/libs/config"'
+					bat 'xcopy "KitBasicaAutomCompra-Ops/config" "KitBasicaAutomCompra/build/libs/config"'
 					bat "deploy-bd.bat"
 					bat "deploy-app.bat"
 				}

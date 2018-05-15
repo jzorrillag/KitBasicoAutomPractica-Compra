@@ -1,2 +1,2 @@
-cd KitBasicoAutomApp\build\libs
-START /B java -jar KitBasicoAutomatizacion.jar
+cd KitBasicaAutomCompra\build\libs
+START /B java -jar KitBasicoAutomatizacionCompra.jar
