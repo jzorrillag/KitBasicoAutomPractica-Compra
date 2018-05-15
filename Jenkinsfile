@@ -90,7 +90,7 @@
 			      }
 					bat 'mkdir "KitBasicaAutomCompra/build/libs/config"'
 					bat 'xcopy "KitBasicaAutomCompra-Ops/config" "KitBasicaAutomCompra/build/libs/config"'
-					bat "deploy-bd.bat"
+					//bat "deploy-bd.bat"
 					bat "deploy-app.bat"
 				}
 			}
