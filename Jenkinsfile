@@ -5,6 +5,7 @@
 		triggers { pollSCM('* * * * *') }
 		
 		stages {
+			/*
 			stage('Probar unitariamente') { 
 				steps { 
 					bat "test.bat"
@@ -20,7 +21,7 @@
 					
 				}
 			}
-			
+
 			stage('Verificar calidad técnica') { 
 				steps { 
 					script{					
@@ -32,7 +33,7 @@
 					}
 					}
 				}
-			}
+			}*/
 			
 			stage('Generar desplegable') { 
 				steps { 
