@@ -61,7 +61,7 @@
 						  "files": [
 							{
 							  "pattern": "*.jar",
-							  "target": "kit-basico-compras-repository"
+							  "target": "kit-basico-repository"
 							}
 						 ]
 						}"""
