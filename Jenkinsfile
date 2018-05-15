@@ -46,7 +46,7 @@
 			
 			stage('Desplegar Integración') { 
 				steps { 
-					bat "deploy-bd.bat"
+					//bat "deploy-bd.bat"
 					bat "deploy-app.bat"
 				}
 			}
