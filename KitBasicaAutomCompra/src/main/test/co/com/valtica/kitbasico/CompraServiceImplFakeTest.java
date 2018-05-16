@@ -32,4 +32,29 @@ public class CompraServiceImplFakeTest {
 		Assert.assertEquals(0, compra.getIva(), 0);
 
 	}
+	
+	@Test
+	public void calcularImpuestoRiquezaCorrecto() {
+
+	}
+	
+	@Test
+	public void calcularImpuestoRiquezaInCorrecto() {
+
+
+	}
+	
+	@Test
+	public void calcularRetencionEmpleado() {
+
+
+	}
+	
+	@Test
+	public void calcularRetencionIndependiente() {
+
+
+	}
+	
+	
 }
