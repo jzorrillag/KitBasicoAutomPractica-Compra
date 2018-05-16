@@ -1,2 +1,2 @@
-cd KitBasicoAutomApp
+cd KitBasicaAutomCompra
 gradlew sonarqube

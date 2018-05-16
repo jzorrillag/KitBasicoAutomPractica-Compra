@@ -11,7 +11,7 @@
 					bat "test.bat"
 				}
 			}
-		
+		*/
 			
 			stage('Analisis de código') { 
 				steps { 
@@ -33,7 +33,7 @@
 					}
 					}
 				}
-			}*/
+			}
 			
 			stage('Generar desplegable') { 
 				steps { 
