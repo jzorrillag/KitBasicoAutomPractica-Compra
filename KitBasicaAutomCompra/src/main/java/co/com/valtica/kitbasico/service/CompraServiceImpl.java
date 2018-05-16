@@ -14,8 +14,8 @@ public class CompraServiceImpl implements CompraService {
 	@Autowired
 	PolizaRepository polizaRepository;
 
-	//@Autowired
-	//GobiernoRepository gobiernoRepository;
+//	@Autowired
+//	GobiernoRepository gobiernoRepository;
 
 	private static final float PORCENTAJE_IVA = 0.19f;
 
