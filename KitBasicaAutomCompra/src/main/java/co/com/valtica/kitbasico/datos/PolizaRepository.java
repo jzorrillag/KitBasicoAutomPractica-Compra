@@ -4,6 +4,6 @@ import co.com.valtica.kitbasico.entidades.Poliza;
 
 public interface PolizaRepository {
 	
-	Poliza consultarPoliza(String idPoliza);
+	Poliza validarPoliza(String idPoliza);
 
 }

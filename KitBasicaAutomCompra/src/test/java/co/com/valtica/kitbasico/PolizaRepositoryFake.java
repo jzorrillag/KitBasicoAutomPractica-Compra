@@ -8,7 +8,7 @@ import co.com.valtica.kitbasico.entidades.Poliza;
 @Profile("test")
 public class PolizaRepositoryFake implements PolizaRepository {
 
-	public Poliza consultarPoliza(String idPoliza) {
+	public Poliza validarPoliza(String idPoliza) {
 
 		if (idPoliza.equals("123")) {
 			return new Poliza(true, 100000f);

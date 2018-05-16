@@ -21,7 +21,7 @@ public class CompraServiceImpl implements CompraService {
 
 	@Override
 	public Compra calcularValorPoliza(String idPoliza, String idAsegurado) {
-		Poliza poliza = polizaRepository.consultarPoliza(idPoliza);
+		Poliza poliza = polizaRepository.validarPoliza(idPoliza);
 
 		Compra compra = new Compra();
 
