@@ -1,4 +1,4 @@
-package unit.co.com.valtica.kitbasico;
+package java.unit.co.com.valtica.kitbasico;
 
 import static org.junit.Assert.assertTrue;
 

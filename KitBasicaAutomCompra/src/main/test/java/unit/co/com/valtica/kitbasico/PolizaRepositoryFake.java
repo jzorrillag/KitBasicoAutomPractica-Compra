@@ -1,4 +1,4 @@
-package unit.co.com.valtica.kitbasico;
+package java.unit.co.com.valtica.kitbasico;
 
 import org.junit.Test;
 import org.springframework.context.annotation.Profile;
