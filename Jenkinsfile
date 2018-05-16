@@ -48,6 +48,7 @@
 				steps { 
 					//bat "deploy-bd.bat"
 					bat "deploy-app.bat"
+					archiveArtifacts artifacts: 'KitBasicaAutomCompra/*.txt', excludes: 'output/*.md'
 				}
 			}
 
@@ -92,6 +93,7 @@
 					bat 'xcopy "KitBasicoAutomPractica-Compra-Ops/config" "KitBasicaAutomCompra/build/libs/config"'
 					bat "deploy-bd.bat"
 					bat "deploy-app.bat"
+					archiveArtifacts artifacts: 'KitBasicaAutomCompra/*.txt', excludes: 'output/*.md'
 				}
 			}
 			
