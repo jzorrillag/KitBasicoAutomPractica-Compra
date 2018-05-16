@@ -10,4 +10,9 @@ public class GobiernoRepositoryImpl implements GobiernoRepository {
 		return 0.10f;
 	}
 
+	@Override
+	public float consultarSalarioMinimo() {
+		return 850f;
+	}
+
 }

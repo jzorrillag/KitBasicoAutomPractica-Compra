@@ -14,8 +14,8 @@ public class CompraServiceImpl implements CompraService {
 	@Autowired
 	PolizaRepository polizaRepository;
 
-//	@Autowired
-//	GobiernoRepository gobiernoRepository;
+	@Autowired
+	GobiernoRepository gobiernoRepository;
 
 	private static final float PORCENTAJE_IVA = 0.19f;
 
@@ -26,7 +26,7 @@ public class CompraServiceImpl implements CompraService {
 		Compra compra = new Compra();
 
 		compra.setIva(calcularIVA(poliza.getValorPoliza()));
-		// compra.setImpuestoRiqueza(calcularImpuestoRiqueza(poliza.getValorPoliza()));
+		compra.setImpuestoRiqueza(calcularImpuestoRiqueza(poliza.getValorPoliza()));
 		// compra.setRetencion(calcularRetencion(idAsegurado,
 		// poliza.getValorPoliza()));
 		return compra;
@@ -39,7 +39,7 @@ public class CompraServiceImpl implements CompraService {
 
 	private Float calcularImpuestoRiqueza(float montoPoliza) {
 
-		float porcentajeImpuesto = 0.19f; //gobiernoRepository.consultarImpuestoRiqueza();
+		float porcentajeImpuesto = gobiernoRepository.consultarImpuestoRiqueza();
 
 		return porcentajeImpuesto * montoPoliza;
 	}
