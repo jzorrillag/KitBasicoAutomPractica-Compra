@@ -2,6 +2,7 @@ package co.com.valtica.kitbasico.entidades;
 
 public class Compra {
 
+	private String idAsegurado;
 	private String idPoliza;
 	private String placa;
 	private String numeroDocumento;
@@ -64,6 +65,14 @@ public class Compra {
 
 	public void setNumeroDocumento(String numeroDocumento) {
 		this.numeroDocumento = numeroDocumento;
+	}
+
+	public String getIdAsegurado() {
+		return idAsegurado;
+	}
+
+	public void setIdAsegurado(String idAsegurado) {
+		this.idAsegurado = idAsegurado;
 	}
 
 }
