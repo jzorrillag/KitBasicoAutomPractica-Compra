@@ -5,6 +5,16 @@ public class Vehiculo {
 	private Boolean asegurable;
 	private String mensaje;
 
+	public Vehiculo() {
+		super();
+	}
+
+	public Vehiculo(Boolean asegurable, String mensaje) {
+		super();
+		this.asegurable = asegurable;
+		this.mensaje = mensaje;
+	}
+
 	public Boolean getAsegurable() {
 		return asegurable;
 	}
