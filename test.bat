@@ -1,3 +1,3 @@
-cd KitBasicoAutomApp
+cd KitBasicaAutomCompra
 gradle test
 exit
