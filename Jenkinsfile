@@ -5,13 +5,13 @@
 		triggers { pollSCM('* * * * *') }
 		
 		stages {
-			/*
+			
 			stage('Probar unitariamente') { 
 				steps { 
 					bat "test.bat"
 				}
 			}
-		*/
+		
 			
 			stage('Analisis de código') { 
 				steps { 
