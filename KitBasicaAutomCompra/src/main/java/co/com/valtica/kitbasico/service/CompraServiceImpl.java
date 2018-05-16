@@ -5,52 +5,48 @@ import org.springframework.stereotype.Service;
 
 import co.com.valtica.kitbasico.datos.GobiernoRepository;
 import co.com.valtica.kitbasico.datos.PolizaRepository;
+import co.com.valtica.kitbasico.entidades.Compra;
 import co.com.valtica.kitbasico.entidades.Poliza;
 
 @Service
-public class CompraServiceImpl implements CompraService{
-	
+public class CompraServiceImpl implements CompraService {
+
 	@Autowired
 	PolizaRepository polizaRepository;
-	
-	@Autowired
-	GobiernoRepository gobiernoRepository;
-	
+
+	//@Autowired
+	//GobiernoRepository gobiernoRepository;
+
 	private static final float PORCENTAJE_IVA = 0.19f;
 
-
-//	public Float calcularImpuesto(String idPoliza) {
-//		Poliza poliza = polizaRepository.consultarPoliza(idPoliza);
-//		
-//		float valorIva =calcularIVA(poliza.getValorPoliza());
-//		float valorRiqueza =calcularImpuestoRiqueza(poliza.getValorPoliza());
-//		
-//		return poliza.getValorPoliza()*PORCENTAJE_IVA;
-//	}
-
-	
 	@Override
-	public Float calcularIVA(String idPoliza) {
+	public Compra calcularValorPoliza(String idPoliza, String idAsegurado) {
 		Poliza poliza = polizaRepository.consultarPoliza(idPoliza);
-		return poliza.getValorPoliza()*PORCENTAJE_IVA;
-	}
-	
-	@Override
-	public Float calcularImpuestoRiqueza(float montoPoliza) {
-		
-		float porcentajeImpuesto = gobiernoRepository.consultarImpuestoRiqueza();
-		return porcentajeImpuesto*montoPoliza;
+
+		Compra compra = new Compra();
+
+		compra.setIva(calcularIVA(poliza.getValorPoliza()));
+		// compra.setImpuestoRiqueza(calcularImpuestoRiqueza(poliza.getValorPoliza()));
+		// compra.setRetencion(calcularRetencion(idAsegurado,
+		// poliza.getValorPoliza()));
+		return compra;
 	}
 
+	private Float calcularIVA(float valorPoliza) {
+		// Poliza poliza = polizaRepository.consultarPoliza(idPoliza);
+		return valorPoliza * PORCENTAJE_IVA;
+	}
 
-	@Override
-	public Float calcularRetencion(String idAsegurado, float montoPoliza) {
-		// TODO Auto-generated method stub
+	private Float calcularImpuestoRiqueza(float montoPoliza) {
+
+		float porcentajeImpuesto = 0.19f; //gobiernoRepository.consultarImpuestoRiqueza();
+
+		return porcentajeImpuesto * montoPoliza;
+	}
+
+	private Float calcularRetencion(String idAsegurado, float montoPoliza) {
+
 		return null;
 	}
-	
-
-	
-	
 
 }

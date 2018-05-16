@@ -1,11 +1,12 @@
 package co.com.valtica.kitbasico.service;
 
+import co.com.valtica.kitbasico.entidades.Compra;
+
 public interface CompraService {
 
-	Float calcularIVA(String idPoliza);
-	Float calcularImpuestoRiqueza(float montoPoliza);
-	//Float calcularImpuesto(String idPoliza);
-	Float calcularRetencion(String idAsegurado, float montoPoliza );
+
+	Compra calcularValorPoliza(String idPoliza, String idAsegurado);
+	
 
 
 }

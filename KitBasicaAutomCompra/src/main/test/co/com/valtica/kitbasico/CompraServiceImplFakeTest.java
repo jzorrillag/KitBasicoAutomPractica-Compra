@@ -1,4 +1,4 @@
-package java.unit.co.com.valtica.kitbasico;
+package co.com.valtica.kitbasico;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -8,6 +8,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import co.com.valtica.kitbasico.entidades.Compra;
 import co.com.valtica.kitbasico.service.CompraService;
 import co.com.valtica.kitbasico.service.CompraServiceImpl;
 
@@ -21,14 +22,14 @@ public class CompraServiceImplFakeTest {
 
 	@Test
 	public void calcularIVAIdPolizacorrecto() {
-		float valorIva = compraService.calcularIVA("123");
-		Assert.assertEquals(19000f, valorIva, 0);
+		Compra compra = compraService.calcularValorPoliza("123", "123");
+		Assert.assertEquals(19000f, compra.getIva(), 0);
 	}
 	
 	@Test
 	public void calcularIVAIdPolizaNoEncontrado() {
-		float valorIva = compraService.calcularIVA("111");
-		Assert.assertEquals(0, valorIva, 0);
+		Compra compra = compraService.calcularValorPoliza("1111", "123");
+		Assert.assertEquals(0, compra.getIva(), 0);
 
 	}
 }

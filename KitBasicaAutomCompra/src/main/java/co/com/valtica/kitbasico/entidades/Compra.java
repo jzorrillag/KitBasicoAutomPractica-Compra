@@ -5,6 +5,42 @@ public class Compra {
 	private String idPoliza;
 	private String placa;
 	private String numeroDocumento;
+	private float iva;
+	private float impuestoRiqueza;
+	private float retencion;
+	private float valorPoliza;
+
+	public float getValorPoliza() {
+		return valorPoliza;
+	}
+
+	public void setValorPoliza(float valorPoliza) {
+		this.valorPoliza = valorPoliza;
+	}
+
+	public float getIva() {
+		return iva;
+	}
+
+	public void setIva(float iva) {
+		this.iva = iva;
+	}
+
+	public float getImpuestoRiqueza() {
+		return impuestoRiqueza;
+	}
+
+	public void setImpuestoRiqueza(float impuestoRiqueza) {
+		this.impuestoRiqueza = impuestoRiqueza;
+	}
+
+	public float getRetencion() {
+		return retencion;
+	}
+
+	public void setRetencion(float retencion) {
+		this.retencion = retencion;
+	}
 
 	public String getIdPoliza() {
 		return idPoliza;

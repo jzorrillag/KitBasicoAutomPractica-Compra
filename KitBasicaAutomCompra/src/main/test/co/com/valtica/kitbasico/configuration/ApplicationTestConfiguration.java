@@ -1,4 +1,4 @@
-package java.unit.co.com.valtica.kitbasico.configuration;
+package co.com.valtica.kitbasico.configuration;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
