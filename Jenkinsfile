@@ -73,27 +73,27 @@
 				}
 			}
 			
-			//stage('Desplegar Pruebas') { 
-			//	steps { 
-			//	
-			//		script{	
-			//		
-			//		input "Desea desplegar a pruebas?"
+			stage('Desplegar Pruebas') { 
+				steps { 
+				
+					script{	
 					
-			//			checkout([$class: 'GitSCM', 
-			//			branches: [[name: '*/master']], 
-			//			doGenerateSubmoduleConfigurations: false, 
-			//			extensions: [[$class: 'RelativeTargetDirectory', 
-			//				relativeTargetDir: 'KitBasicaAutomCompra-Ops']], 
-			//			submoduleCfg: [], 
-			//			userRemoteConfigs: [[url: 'https://github.com/mauro2357/KitBasicoAutomPractica-Compra.git']]])     
-			 //     }
-			//		bat 'mkdir "KitBasicaAutomCompra/build/libs/config"'
-			//		bat 'xcopy "KitBasicaAutomCompra-Ops/config" "KitBasicaAutomCompra/build/libs/config"'
-			//		//bat "deploy-bd.bat"
-			//		bat "deploy-app.bat"
-			//	}
-			//}
+					input "Desea desplegar a pruebas?"
+					
+						checkout([$class: 'GitSCM', 
+						branches: [[name: '*/master']], 
+						doGenerateSubmoduleConfigurations: false, 
+						extensions: [[$class: 'RelativeTargetDirectory', 
+							relativeTargetDir: 'KitBasicoAutomPractica-Compra-Ops']], 
+						submoduleCfg: [], 
+						userRemoteConfigs: [[url: 'https://github.com/mauro2357/KitBasicoAutomPractica-Compra-Ops.git']]])     
+			     }
+					bat 'mkdir "KitBasicaAutomCompra/build/libs/config"'
+					bat 'xcopy "KitBasicoAutomPractica-Compra-Ops/config" "KitBasicaAutomCompra/build/libs/config"'
+					bat "deploy-bd.bat"
+					bat "deploy-app.bat"
+				}
+			}
 			
 		}
 		
