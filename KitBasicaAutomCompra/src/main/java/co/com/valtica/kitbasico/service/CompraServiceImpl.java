@@ -20,17 +20,15 @@ public class CompraServiceImpl implements CompraService {
 
 	@Autowired
 	AseguradoRepository aseguradoRepository;
-	
+
 	@Autowired
 
 	private static final float PORCENTAJE_IVA = 0.19f;
 
 	@Override
 	public Compra calcularValorPoliza(String idPoliza, String idAsegurado) {
-		
+
 		Poliza poliza = polizaRepository.validarPoliza(idPoliza);
-		
-		
 
 		Compra compra = new Compra();
 

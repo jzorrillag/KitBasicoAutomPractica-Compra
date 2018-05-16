@@ -10,14 +10,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/")
 public class ApplicationController {
 
-	 @Autowired
-	 ConfigurableApplicationContext applicationContext;
-	 
-	 @GetMapping("/shutdown")
-	 public void shutdown() {
-		 System.out.println("Shutdown"+applicationContext);
-		 applicationContext.close();
-	 }
-	
-	
+	@Autowired
+	ConfigurableApplicationContext applicationContext;
+
+	@GetMapping("/shutdown")
+	public void shutdown() {
+		applicationContext.close();
+	}
+
 }

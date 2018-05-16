@@ -10,9 +10,7 @@ public class VehiculoRepositoryImpls implements VehiculoRepository {
 	public Vehiculo validarVehiculo(String idPlaca) {
 
 		RestTemplate restTemplate = new RestTemplate();
-		Vehiculo vehiculo = restTemplate.getForObject("http://172.16.0.123:8585/api/vehiculo/valida/" + idPlaca,
-				Vehiculo.class);
-		return vehiculo;
+		return restTemplate.getForObject("http://172.16.0.123:8585/api/vehiculo/valida/" + idPlaca, Vehiculo.class);
 
 	}
 

@@ -11,8 +11,7 @@ public class PolizaRepositoryImpl implements PolizaRepository {
 	public Poliza validarPoliza(String idPoliza) {
 
 		RestTemplate restTemplate = new RestTemplate();
-		Poliza poliza = restTemplate.getForObject("http://172.16.0.123:6969/api/poliza/"+idPoliza, Poliza.class);
-		return poliza;
+		return restTemplate.getForObject("http://172.16.0.123:6969/api/poliza/" + idPoliza, Poliza.class);
 	}
 
 }
