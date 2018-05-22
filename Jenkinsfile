@@ -13,7 +13,7 @@
 			}
 		
 			
-			stage('Analisis de código') { 
+			stage('Analisis de cÃ³digo') { 
 				steps { 
 					withSonarQubeEnv('SonarQubeLocal') {
 						bat 'anali_code.bat'
@@ -22,7 +22,7 @@
 				}
 			}
 
-			stage('Verificar calidad técnica') { 
+			stage('Verificar calidad tÃ©cnica') { 
 				steps { 
 					script{					
 					timeout(time: 1, unit: 'HOURS') { // Just in case something goes wrong, pipeline will be killed after a timeout
@@ -44,7 +44,7 @@
 				}
 			}
 			
-			stage('Desplegar Integración') { 
+			stage('Desplegar IntegraciÃ³n') { 
 				steps { 
 					//bat "deploy-bd.bat"
 					bat "deploy-app.bat"
@@ -101,7 +101,7 @@
 		
 		post {
 			failure {
-				mail to: 'jv6699@gmail.com',
+				mail to: 'jzorrillag@gmd.com.pe',
 					subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
 					body: "Something is wrong with ${env.BUILD_URL}"
 			}
